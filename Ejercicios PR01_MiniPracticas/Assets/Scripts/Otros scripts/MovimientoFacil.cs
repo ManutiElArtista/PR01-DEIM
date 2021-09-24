@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MovimientoFacil : MonoBehaviour
+{
+
+    [SerializeField] int speed;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.right * speed * Time.deltaTime); // Es un método para mover el objeto mas sencillo.
+    }
+}
