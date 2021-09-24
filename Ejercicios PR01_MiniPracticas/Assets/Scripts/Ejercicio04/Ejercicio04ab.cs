@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ejercicio04ab : MonoBehaviour
 {
+
+    bool contUp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +17,18 @@ public class Ejercicio04ab : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine("Contador");
+            if (contUp == false)
+            {
+                StartCoroutine("Contador");
+                contUp = true;
+            }
+            else
+            {
+                StopCoroutine("Contador");
+                contUp = false;
+            }
         }
-        if(Input.GetKeyUp(KeyCode.E))
-        {
-            StopCoroutine("Contador");
-        }
+        
     }
 
     IEnumerator Contador()
