@@ -28,6 +28,7 @@ public class Interactividad : MonoBehaviour
         if(Input.GetKey("space")) // Si dejas pulsado barra espaciadora, se cumple la condicion.
         {
             print("Se esta disparando");*/
+        // Input.GetKeyDown/Up.E es para que al pulsar o levantar el boton, te inicie lo que sea.
 
         float desplY = Input.GetAxis("Vertical");
         transform.Translate(Vector3.up * desplY * Time.deltaTime);
